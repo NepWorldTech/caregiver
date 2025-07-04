@@ -1,17 +1,25 @@
 import React from 'react'
-import main from '../../assets/images/main.png'
+import old from '../../assets/images/old.png'
+import sky from '../../assets/images/sky.jpg'
 
 const Home = () => {
   return (
-    <div className="bg-[#ffe1c9] py-16 px-6 md:px-12 lg:px-20">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div
+      className="relative bg-cover bg-center py-16 px-6 md:px-12 lg:px-20"
+      style={{ backgroundImage: `url(${sky})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 z-0"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold italic text-black leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold italic text-white leading-tight mb-4">
             Empowering Comfort <br /> and Dignity for <br /> Family Members.
           </h1>
-          <p className="text-lg text-gray-700 mb-8">
-            Emotional and practical services and support for carers.
+          <p className="text-lg text-gray-200 mb-8">
+           From daily wellness to emotional support — <br/>we’re here to ensure every moment is lived with <br/> dignity, comfort, and peace of mind.
           </p>
 
           {/* Stats */}
@@ -37,7 +45,11 @@ const Home = () => {
 
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
-          <img src={main} alt="Care illustration" className="max-w-full h-auto rounded-xl   shadow-lg" />
+          <img
+            src={old}
+            alt="Care illustration"
+            className="max-w-full h-auto "
+          />
         </div>
       </div>
     </div>
@@ -45,4 +57,5 @@ const Home = () => {
 }
 
 export default Home
+
 
