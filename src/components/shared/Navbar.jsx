@@ -21,8 +21,8 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `hover:text-[#b04123] hover:underline transition ${
-                isActive ? 'text-[#b04123] underline' : ''
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
               }`
             }
           >
@@ -31,23 +31,55 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `hover:text-[#b04123] hover:underline transition ${
-                isActive ? 'text-[#b04123] underline' : ''
+              `hover:text-[#7f91e0]  hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
               }`
             }
           >
             About
           </NavLink>
+           <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
+              }`
+            }
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/teams"
+            className={({ isActive }) =>
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
+              }`
+            }
+          >
+           Our Team
+          </NavLink>
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `hover:text-[#b04123] hover:underline transition ${
-                isActive ? 'text-[#b04123] underline' : ''
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
               }`
             }
           >
             Contact
           </NavLink>
+          <button className='border border-gray-300 rounded-lg p-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500'>
+            <NavLink
+            to="/appointment"
+            className={({ isActive }) =>
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
+              }`
+            }
+          >
+            Make Appointment
+          </NavLink>
+          </button>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -65,8 +97,8 @@ const Navbar = () => {
             to="/"
             onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-[#b04123] hover:underline transition ${
-                isActive ? 'text-[#b04123] underline' : ''
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
               }`
             }
           >
@@ -76,19 +108,30 @@ const Navbar = () => {
             to="/about"
             onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-[#b04123] hover:underline transition ${
-                isActive ? 'text-[#b04123] underline' : ''
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
               }`
             }
           >
             About
           </NavLink>
+           <NavLink
+            to="/services"
+            onClick={toggleMenu}
+            className={({ isActive }) =>
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
+              }`
+            }
+          >
+           Services
+          </NavLink>
           <NavLink
             to="/contact"
             onClick={toggleMenu}
             className={({ isActive }) =>
-              `hover:text-[#b04123] hover:underline transition ${
-                isActive ? 'text-[#b04123] underline' : ''
+              `hover:text-[#7f91e0] hover:underline transition ${
+                isActive ? 'text-[#6921dd] underline' : ''
               }`
             }
           >

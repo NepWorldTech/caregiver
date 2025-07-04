@@ -11,14 +11,14 @@ const Contact = () => {
     <>
       <section
         className="relative bg-cover bg-center bg-no-repeat text-white px-4 py-20 md:py-32"
-        style={{ backgroundImage: `url(${talk})` }}
+         style={{ backgroundImage: `url(${talk})` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0  z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center md:items-start max-w-4xl mx-auto text-center md:text-left space-y-6">
-          <h1 className="text-[#ffd3b3] text-2xl font-semibold">Contact Us</h1>
+          <h1 className="text-white text-2xl font-semibold"> Home / Contact Us</h1>
           <h2 className="text-4xl md:text-5xl font-bold leading-snug">
             Don't let your Health <br /> Take a Back Seat!
           </h2>
@@ -59,7 +59,7 @@ const Contact = () => {
                 <input
                   type="tel"
                   placeholder="Enter your phone number"
-                  className="border border-gray-300 rounded-lg p-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   className="border border-gray-300 rounded-lg p-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="flex flex-col">

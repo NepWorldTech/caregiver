@@ -37,7 +37,7 @@ const About = () => {
         className="relative bg-cover bg-center bg-no-repeat text-white flex items-center justify-center text-center px-4 py-24 md:py-32"
         style={{ backgroundImage: `url(${consult})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        <div className="absolute inset-0 bg-black/40 z-0"></div>
         <div className="relative z-10 max-w-3xl mx-auto space-y-6">
           <p className="text-3xl md:text-4xl font-bold leading-snug">
             We're <span className="text-blue-400">Take Care</span> <br />
