@@ -1,35 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+
 import consult from '../../assets/images/consult.jpg';
 import laugh from '../../assets/images/laugh.jpg';
 import commit from '../../assets/images/commit.jpg';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-
-const faqs = [
-  {
-    question: 'How are the carers approved/insured?',
-    answer: 'We have a rigorous vetting process in place. All carers go through thorough background checks, interviews, and reference verification...',
-  },
-  {
-    question: 'How do I make/change/cancel a booking?',
-    answer: 'Making or managing a booking is simple and flexible. You can use our online platform, mobile app, or call our support team...',
-  },
-  {
-    question: 'How do I pay the carer?',
-    answer: 'All payments are handled securely through our platform. Once your booking is completed and confirmed, payment is automatically processed...',
-  },
-  {
-    question: 'Are my funds secure and are my payments to carers guaranteed?',
-    answer: 'Yes, your funds are completely secure. We use encrypted payment gateways to protect your transactions...',
-  },
-];
+import family from '../../assets/images/family.jpg';
 
 const About = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <>
       {/* Hero Section */}
@@ -89,47 +66,51 @@ const About = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="bg-white py-12 px-4 sm:px-6 lg:px-20">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <div>
-            <h1 className="text-blue-500 text-xl font-semibold">FAQs</h1>
-            <h2 className="text-3xl font-bold text-gray-800">
-              Frequently Asked <span className="text-blue-500 block">Questions</span>
-            </h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border rounded-xl p-4 shadow-sm bg-white transition-all duration-300">
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center text-left"
-                >
-                  <span className="text-lg font-semibold text-gray-800">{faq.question}</span>
-                  {openIndex === index ? (
-                    <ChevronUp className="text-blue-500" />
-                  ) : (
-                    <ChevronDown className="text-blue-500" />
-                  )}
-                </button>
-                {openIndex === index && (
-                  <p className="mt-3 text-gray-600 text-sm">{faq.answer}</p>
-                )}
-              </div>
-            ))}
-          </div>
+      {/* Core Values Section */}
+      <section className="flex flex-col md:flex-row items-center bg-blue-950 text-white py-20 px-6 md:px-20 gap-10 relative">
+        <div className="flex-1">
+          {/* Slightly smaller image */}
+          <img
+            src={family}
+            alt="Core Values"
+            className="rounded-2xl w-full h-[100vh] object-cover"
+          />
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-500 rounded-2xl mt-10  px-10 py-20 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-          Care Beyond Expectations, <br /> When You Need It Most
-        </h1>
-        <p className="font-medium text-white text-base md:text-lg">
-          Experience personalized support and peace of mind with <br className="hidden sm:block" />
-          compassionate professionals ready to help—right at your doorstep.
-        </p>
+        <div className="flex-1 space-y-6 relative -mt-6">
+          <div>
+            <h2 className="text-2xl font-bold mb-1">+ Core Values</h2>
+            <h3 className="text-xl font-semibold">Caring with Purpose</h3>
+          </div>
+
+          {/* Core Values List */}
+          {[
+            {
+              title: 'Compassion',
+              desc: 'We believe in treating every client with kindness and empathy, ensuring they feel valued and respected in every interaction.'
+            },
+            {
+              title: 'Integrity',
+              desc: 'We uphold the highest standards of honesty and transparency in our services. Trust is essential in caregiving.'
+            },
+            {
+              title: 'Excellence',
+              desc: 'We are committed to delivering the highest quality of care. Our team continuously seeks improvement and innovation.'
+            },
+            {
+              title: 'Empathy',
+              desc: 'We listen, understand, and connect with each client\'s needs, delivering care with a compassionate, human touch.'
+            }
+          ].map((item, index) => (
+            <div key={index} className="border-t border-white/20 pt-4">
+              <h4 className="text-lg font-semibold flex items-center gap-2">
+                <ArrowRight className="w-4 h-4 text-blue-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:animate-bounce" />
+                {item.title}
+              </h4>
+              <p className="text-sm text-white/90 mt-1">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

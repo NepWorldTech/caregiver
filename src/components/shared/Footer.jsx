@@ -1,9 +1,35 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/logo.jpg'
+import care from '../../assets/images/care.jpg';
 
 const Footer = () => {
   return (
+    <>
+     <div
+            className="relative mt-20 mx-6 md:mx-20 bg-cover bg-center bg-no-repeat rounded-xl overflow-hidden"
+            style={{ backgroundImage: `url(${care})` }}
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="relative z-10 text-white text-center px-6 py-20">
+              <h1 className="text-2xl md:text-4xl font-bold">+ Get Started</h1>
+              <h2 className="text-base md:text-2xl mt-2 mb-4 font-semibold">Your Journey Begins Here</h2>
+    
+              <NavLink to="/contact">
+                <button className="bg-blue-950  cursor-pointer  text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                  Contact Us
+                </button>
+              </NavLink>
+    
+              <div className="mt-8 max-w-3xl mx-auto text-sm md:text-base">
+                <p>
+                  Have questions or need assistance? Our dedicated team is here to help you every step of the way.
+                  Reach out today, and let's start a conversation.
+                </p>
+              </div>
+            </div>
+          </div>
+       
     <footer className="bg-white text-black pt-10 pb-6 px-6 md:px-20 mt-12">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
         
@@ -49,14 +75,14 @@ const Footer = () => {
               Contact
             </NavLink>
             <NavLink
-              to="/resources"
+              to="/faqs"
               className={({ isActive }) =>
                 `hover:text-blue-500 hover:underline ${
                   isActive ? 'text-blue-600 underline' : ''
                 }`
               }
             >
-              Resources
+             FAQs
             </NavLink>
           </ul>
         </div>
@@ -75,6 +101,7 @@ const Footer = () => {
         © {new Date().getFullYear()} CareCiver. All rights reserved.
       </div>
     </footer>
+       </>
   )
 }
 
