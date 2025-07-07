@@ -53,7 +53,7 @@ const Pricing = () => {
               <h3 className="text-lg font-bold">02. Personalized Care Plan</h3>
               <p>Based on the consultation, we create a tailored care plan that matches their lifestyle.</p>
             </div>
-            <div className="bg-white text-black p-5 rounded-lg shadow-md">
+            <div className="bg-white text-gray-800 p-5 rounded-lg shadow-md">
               <h3 className="text-lg font-bold">03. Ongoing Support</h3>
               <p>Our caregivers provide consistent, compassionate care with regular check-ins.</p>
             </div>
